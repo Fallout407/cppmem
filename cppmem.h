@@ -6,8 +6,10 @@
 
 using namespace std;
 
-void getPID(DWORD out, string windowName) {
-	HWND window = FindWindow(NULL, &windowName);
+string taskName = "Put task name here (eg. csgo)";
+
+void getPID(DWORD out) {
+	HWND window = FindWindow(NULL, &taskName);
 	if (window == NULL) {
 		cout << "Process ID finding failed. (could not find window)" << endl;
 	}

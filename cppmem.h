@@ -6,10 +6,10 @@
 
 using namespace std;
 
-string taskName = "Put task name here (eg. csgo)";
+LPCSTR taskName = "Put task name here (eg. csgo)";
 
 void getPID(DWORD out) {
-	HWND window = FindWindow(NULL, &taskName);
+	HWND window = FindWindow(NULL, taskName);
 	if (window == NULL) {
 		cout << "Process ID finding failed. (could not find window)" << endl;
 	}
